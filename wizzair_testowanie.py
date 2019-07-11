@@ -49,7 +49,7 @@ class WizzairRegistration(unittest.TestCase):
         zaloguj_btn.click()
         # ======================
         # 2. Kliknij REJESTRACJA
-        rejestracja_btn = driver.find_element_by_xpath('//button[text()="Rejestracja"]')
+        rejestracja_btn = driver.find_element_by_css_selector('.login-form__footer button.content__link1')
         rejestracja_btn.click()
         # ======================
         # 3. Wprowadź imię
@@ -72,7 +72,7 @@ class WizzairRegistration(unittest.TestCase):
             f.click()
         # ======================
         # 6. Wpisz nr telefonu
-        telephone_field = driver.find_element_by_name("mobilePhone")
+        telephone_field = driver.find_element_by_name("phoneNumberValidDigits")
         telephone_field.send_keys(valid_telephone)
         # ======================
         # 7. Wpisz niepoprawny e-mail (brak '@')
